@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sekolah Modern</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f7fb;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      position:fixed;
+      top:0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+      background:rgba(0,0,0,0.3);
+      backdrop-filter:blur(10px);
+
+      animation:navDown 1s ease;
+    }
+
+    @keyframes navDown{
+      from{
+        opacity:0;
+        transform:translateY(-100px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .logo{
+      color:white;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00bfff;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      height:100vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero{
+      animation:fadeUp 1.5s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(80px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .hero h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:700px;
+      font-size:20px;
+      line-height:1.7;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:15px 35px;
+      background:#00bfff;
+      color:white;
+      text-decoration:none;
+      border-radius:40px;
+      transition:0.4s;
+
+      animation:pulse 2s infinite;
+    }
+
+    .btn:hover{
+      transform:scale(1.1);
+      background:#009acd;
+    }
+
+    @keyframes pulse{
+      0%{
+        box-shadow:0 0 0 0 rgba(0,191,255,0.7);
+      }
+
+      70%{
+        box-shadow:0 0 0 20px rgba(0,191,255,0);
+      }
+
+      100%{
+        box-shadow:0 0 0 0 rgba(0,191,255,0);
+      }
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 8%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h2{
+      font-size:42px;
+      color:#0d1b2a;
+      position:relative;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+
+      transition:0.4s;
+      animation:fadeCard 1s ease;
+    }
+
+    @keyframes fadeCard{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .card:hover{
+      transform:translateY(-15px) scale(1.03);
+    }
+
+    .card h3{
+      color:#0077b6;
+      margin-bottom:15px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      border-radius:20px;
+
+      transition:0.5s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.08) rotate(2deg);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0d1b2a;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+
+    <div class="logo">SMK MODERN</div>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Jurusan</a></li>
+      <li><a href="#">Galeri</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+
+  </nav>
+
+  <header>
+
+    <div class="hero">
+
+      <h1>SEKOLAH MASA DEPAN</h1>
+
+      <p>
+        Membangun generasi modern, kreatif,
+        dan siap menghadapi dunia digital.
+      </p>
+
+      <a href="#" class="btn">Daftar Sekarang</a>
+
+    </div>
+
+  </header>
+
+  <section>
+
+    <div class="title">
+      <h2>Keunggulan Sekolah</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Guru Profesional</h3>
+
+        <p>
+          Guru berpengalaman dengan metode belajar modern.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Fasilitas Lengkap</h3>
+
+        <p>
+          Laboratorium modern, wifi cepat,
+          dan kelas nyaman.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Prestasi Nasional</h3>
+
+        <p>
+          Banyak siswa berprestasi di tingkat nasional.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="title">
+      <h2>Galeri Sekolah</h2>
+    </div>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1470&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1470&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 SMK MODERN INDONESIA</p>
+  </footer>
+
+</body>
+</html>
